@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp">
+
+    <TextView
+        android:id="@+id/commentef"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="อีเมลเพื่อติดต่อกลับ:"/>
+
+    <EditText
+        android:id="@+id/commentee"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:inputType="text|textMultiLine"
+        android:ems="10"
+        android:layout_alignLeft="@id/commentef"
+        android:layout_below="@id/commentef"/>
+
+    <TextView
+        android:id="@+id/commentTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ข้อติชม/ข้อคิดเห็น:"
+        android:layout_alignLeft="@id/commentee"
+        android:layout_below="@id/commentee"/>
+
+    <EditText
+        android:id="@+id/commentET"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:inputType="text|textMultiLine"
+        android:ems="10"
+        android:layout_alignLeft="@id/commentTV"
+        android:layout_below="@id/commentTV"/>
+
+    <RadioGroup
+        android:id="@+id/rgroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/commentET"
+        android:layout_below="@id/commentET">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ส่งเลย" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ส่งและแชร์ลงเฟซบุ๊ก" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ส่งและแชร์ลง X" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/saveBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ส่ง"
+        android:layout_alignRight="@id/rgroup"
+        android:layout_below="@id/rgroup"  />
+</RelativeLayout>

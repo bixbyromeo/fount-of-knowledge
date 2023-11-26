@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/purple_200">
+
+        <ImageButton
+            android:id="@+id/profileBtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/profile"
+            android:background="@null"
+            android:layout_gravity="left"
+            android:scaleType="fitCenter"
+            android:layout_centerVertical="true" />
+        <TextView
+            android:id="@+id/toolbarTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="หน้าหลัก"
+            android:paddingRight="50dp"
+            android:textColor="@android:color/white"
+            android:textSize="30sp" />
+
+        <ImageButton
+            android:id="@+id/settingBtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="right"
+            android:src="@drawable/setting_ic" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Original CardView -->
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="20dp"
+        app:cardElevation="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="10dp">
+
+        <RelativeLayout
+            android:id="@+id/enterGame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:id="@+id/listImage"
+                android:src="@drawable/science"
+                android:scaleType="centerCrop"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                app:shapeAppearanceOverlay="@style/roundedImageViewRounded"/>
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:id="@+id/listName"
+                android:text="ผู้เริ่มต้น"
+                android:textColor="@color/lavender"
+                android:textSize="20sp"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="30dp"
+                android:layout_toEndOf="@id/listImage"/>
+        </RelativeLayout></androidx.cardview.widget.CardView>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_weight="1"/>
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        app:srcCompat="@drawable/baseline_chevron_left_24"
+        />
+</LinearLayout>
